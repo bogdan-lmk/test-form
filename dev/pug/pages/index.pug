@@ -9,10 +9,91 @@ block content
 	section.main
 		.container
 			.row.d-flex.align-items-center.justify-content-center.flex-column
-				.heading-wrap.col-4.d-flex.justify-content-center
+				.heading-wrap.d-flex.justify-content-center
 					h2.main-heading Анкета
 				.container.d-flex.justify-content-center.flex-column.align-items-center
-					.icon-wrap.col-4.d-flex.justify-content-center
+					.icon-wrap.d-flex.justify-content-center
 						+icon('icon-f')
-					.heading-wrap.col-4.d-flex.justify-content-center
+					.sub-heading-wrap.d-flex.justify-content-center
 						h3.sub-heading Личная информация
+					.container
+						.row.justify-content-center
+							.col-6.d-flex.justify-content-center
+								.form-group
+									.input-row
+										input.info-field(placeholder="ФИО", value="Lameko Bogdan Aleksandrovich")
+									.input-row
+										input.info-field
+									.input-row
+										input.info-field
+									.input-row
+										input.info-field
+				.container.d-flex.justify-content-center.flex-column.align-items-center
+					.icon-wrap.d-flex.justify-content-center
+						+icon('icon-s')
+					.sub-heading-wrap.d-flex.justify-content-center
+						h3.sub-heading Расскажите о своем опыте
+					.container
+						.row.justify-content-center
+							.col-10.d-flex.justify-content-between
+								.form-group--checkbox
+									.input-row--checkbox
+										label.custom-control.custom-checkbox
+											input(type="checkbox").custom-control-input
+											span.custom-control-indicator.custom-indicator
+											span.custom-control-description БЭМ/OOCSS
+										.input-row--checkbox
+											label.custom-control.custom-checkbox
+												input(type="checkbox").custom-control-input
+												span.custom-control-indicator.custom-indicator
+												span.custom-control-description Stylus/LESS/SASS
+										.input-row--checkbox
+											label.custom-control.custom-checkbox
+												input(type="checkbox").custom-control-input
+												span.custom-control-indicator.custom-indicator
+												span.custom-control-description Работаю с SVG		
+								.form-group--checkbox
+									.input-row--checkbox
+										label.custom-control.custom-checkbox
+											input(type="checkbox").custom-control-input
+											span.custom-control-indicator.custom-indicator
+											span.custom-control-description Верстаю семантично
+										.input-row--checkbox
+											label.custom-control.custom-checkbox
+												input(type="checkbox").custom-control-input
+												span.custom-control-indicator.custom-indicator
+												span.custom-control-description ES2015/ES2016
+										.input-row--checkbox
+											label.custom-control.custom-checkbox
+												input(type="checkbox").custom-control-input
+												span.custom-control-indicator.custom-indicator
+												span.custom-control-description Gulp/GRUNT
+								.form-group--checkbox
+									.input-row--checkbox
+										label.custom-control.custom-checkbox
+											input(type="checkbox").custom-control-input
+											span.custom-control-indicator.custom-indicator
+											span.custom-control-description Webpack
+										.input-row--checkbox
+											label.custom-control.custom-checkbox
+												input(type="checkbox").custom-control-input
+												span.custom-control-indicator.custom-indicator
+												span.custom-control-description jQuery
+										.input-row--checkbox
+											label.custom-control.custom-checkbox
+												input(type="checkbox").custom-control-input
+												span.custom-control-indicator.custom-indicator
+												span.custom-control-description Ипользую Git
+						.container.d-flex.justify-content-center
+							.col-8.d-flex.justify-content-center.flex-column.align-items-center
+								.icon-wrap.d-flex.justify-content-center
+									+icon('icon-th')
+								.sub-heading-wrap.d-flex.justify-content-center.flex-column
+									h3.sub-heading Расскажите о себе
+									p.description-text Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+								.container
+									.row.justify-content-center
+										.col-10.d-flex.flex-column.align-items-center
+											.review-row
+												textarea.review-area
+											button.btn-primary.btn-ready Готово
