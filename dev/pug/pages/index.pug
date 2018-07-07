@@ -11,89 +11,134 @@ block content
 			.row.d-flex.align-items-center.justify-content-center.flex-column
 				.heading-wrap.d-flex.justify-content-center
 					h2.main-heading Анкета
-				.container.d-flex.justify-content-center.flex-column.align-items-center
+				.container.container-custom.container-custom--info.d-flex.justify-content-center.flex-column.align-items-center
 					.icon-wrap.d-flex.justify-content-center
 						+icon('icon-f')
 					.sub-heading-wrap.d-flex.justify-content-center
 						h3.sub-heading Личная информация
 					.container
 						.row.justify-content-center
-							.col-6.d-flex.justify-content-center
+							.col.d-flex.justify-content-center
 								.form-group
 									.input-row
 										input.info-field(placeholder="ФИО", value="Lameko Bogdan Aleksandrovich")
+									.input-row.select-row
+										.select-item
+											.icon-wrap--arrow
+												+icon('up-arrow')
+											.custom-option-current
+												input#date.date-choice(type="radio" name="selected-date" checked)
+												label.date-pick(for="date") 1996
+											.custom-option-list.custom-option-list--closed
+												.custom-option-select 
+													input#date.date-choice(type="radio" name="selected-date")
+													label.date-pick(for="date" name="selected-date") 1998
+												.custom-option-select 
+													input#date.date-choice(type="radio" name="selected-date")
+													label.date-pick(for="date" name="selected-date") 1997
+												.custom-option-select 
+													input#date.date-choice(type="radio" name="selected-date")
+													label.date-pick(for="date" name="selected-date") 1996
+												.custom-option-select 
+													input#date.date-choice(type="radio" name="selected-date")
+													label.date-pick(for="date" name="selected-date") 1995
+												.custom-option-select
+													input#date.date-choice(type="radio" name="selected-date" )
+													label.date-pick(for="date") 1994
+												.custom-option-select 
+													input#date.date-choice(type="radio" name="selected-date")
+													label.date-pick(for="date" name="selected-date") 1993
+												.custom-option-select
+													input#date.date-choice(type="radio" name="selected-date" )
+													label.date-pick(for="date") 1992
+												.custom-option-select 
+													input#date.date-choice(type="radio" name="selected-date")
+													label.date-pick(for="date" name="selected-date") 1991
+												.custom-option-select
+													input#date.date-choice(type="radio" name="selected-date" )
+													label.date-pick(for="date") 1990
 									.input-row
-										input.info-field
+										input.info-field.info-field--location(placeholder="Место проживания", value="")
+										span.name-field Место проживания
 									.input-row
-										input.info-field
+										input.info-field(placeholder="Skype", value="")
 									.input-row
-										input.info-field
-				.container.d-flex.justify-content-center.flex-column.align-items-center
+										input.info-field(placeholder="E-mail", value="")
+				.container.container-custom.container-custom--experience.d-flex.justify-content-center.flex-column.align-items-center
 					.icon-wrap.d-flex.justify-content-center
 						+icon('icon-s')
 					.sub-heading-wrap.d-flex.justify-content-center
 						h3.sub-heading Расскажите о своем опыте
 					.container
 						.row.justify-content-center
-							.col-10.d-flex.justify-content-between
+							.col.col-md-12.d-flex.justify-content-between.flex-column.flex-sm-column.flex-md-row
 								.form-group--checkbox
 									.input-row--checkbox
 										label.custom-control.custom-checkbox
 											input(type="checkbox").custom-control-input
 											span.custom-control-indicator.custom-indicator
+												+icon('checked')
 											span.custom-control-description БЭМ/OOCSS
 										.input-row--checkbox
 											label.custom-control.custom-checkbox
 												input(type="checkbox").custom-control-input
 												span.custom-control-indicator.custom-indicator
+													+icon('checked')
 												span.custom-control-description Stylus/LESS/SASS
 										.input-row--checkbox
 											label.custom-control.custom-checkbox
 												input(type="checkbox").custom-control-input
 												span.custom-control-indicator.custom-indicator
+													+icon('checked')
 												span.custom-control-description Работаю с SVG		
 								.form-group--checkbox
 									.input-row--checkbox
 										label.custom-control.custom-checkbox
 											input(type="checkbox").custom-control-input
 											span.custom-control-indicator.custom-indicator
+												+icon('checked')
 											span.custom-control-description Верстаю семантично
 										.input-row--checkbox
 											label.custom-control.custom-checkbox
 												input(type="checkbox").custom-control-input
 												span.custom-control-indicator.custom-indicator
+													+icon('checked')
 												span.custom-control-description ES2015/ES2016
 										.input-row--checkbox
 											label.custom-control.custom-checkbox
 												input(type="checkbox").custom-control-input
 												span.custom-control-indicator.custom-indicator
+													+icon('checked')
 												span.custom-control-description Gulp/GRUNT
 								.form-group--checkbox
 									.input-row--checkbox
 										label.custom-control.custom-checkbox
 											input(type="checkbox").custom-control-input
 											span.custom-control-indicator.custom-indicator
+												+icon('checked')
 											span.custom-control-description Webpack
 										.input-row--checkbox
 											label.custom-control.custom-checkbox
 												input(type="checkbox").custom-control-input
 												span.custom-control-indicator.custom-indicator
+													+icon('checked')
 												span.custom-control-description jQuery
 										.input-row--checkbox
 											label.custom-control.custom-checkbox
 												input(type="checkbox").custom-control-input
 												span.custom-control-indicator.custom-indicator
+													+icon('checked')
 												span.custom-control-description Ипользую Git
-						.container.d-flex.justify-content-center
-							.col-8.d-flex.justify-content-center.flex-column.align-items-center
-								.icon-wrap.d-flex.justify-content-center
-									+icon('icon-th')
-								.sub-heading-wrap.d-flex.justify-content-center.flex-column
-									h3.sub-heading Расскажите о себе
-									p.description-text Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
-								.container
-									.row.justify-content-center
-										.col-10.d-flex.flex-column.align-items-center
-											.review-row
-												textarea.review-area
-											button.btn-primary.btn-ready Готово
+				.container.container-custom.container-custom--about.d-flex.justify-content-center
+					.col.d-flex.justify-content-center.flex-column.align-items-center
+						.icon-wrap.d-flex.justify-content-center
+							+icon('icon-th')
+						.sub-heading-wrap.d-flex.justify-content-center.flex-column
+							h3.sub-heading Расскажите о себе
+							p.description-text Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+						.container
+							.row.justify-content-center
+								.col.col-sm-10.d-flex.flex-column.align-items-center
+									.review-row
+										textarea.review-area
+									button.btn-primary.btn-ready Готово

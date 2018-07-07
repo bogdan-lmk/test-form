@@ -1,16 +1,87 @@
 .main
   margin-bottom: 250px
+  position relative
+  &:before
+    top 0
+    left 0
+    content ''
+    width 100%
+    height 200px
+    position absolute
+    background: linear-gradient(to top, white, transparent)
+    z-index 99
+  &:after
+    top 0
+    left 0
+    content ''
+    width 100%
+    height 200px
+    position absolute
+    background: url('/static/img/general/bg.jpg') no-repeat center
 .heading-wrap
   margin-bottom: 70px
-
+  margin-top 130px
+  font-family: 'Roboto-Light'
+  position relative
+.main-heading
+  font-size 70px
+  font-family robotoThin
+  z-index 99
 .sub-heading-wrap
   margin-bottom: 50px
   text-align: center;
-
+.bg
+  position absolute
+  left 0
+  top 0
+  height 50%
+.img-wrap
+  position relative
+  &:after
+    content''
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    background: linear-gradient(to top, white, transparent);
+    z-index -1
+.container-custom
+  margin-bottom 70px
+  &:last-child
+    margin-bottom 0px
 .form-group
   width: 90%
 
 .info-field
+  text-align center
+  height 60px
+  border 1px solid #e5e5e5
+  border-radius 5px
+  font-family "Roboto-Regular"
+  font-size 20px
+  &:focus
+    border 1px solid #435993
+
+.info-field--location
+  &:focus
+    padding-top 25px
+.info-field::-webkit-input-placeholder{
+  color: #c8c8c8
+  font-size 24px
+  font-family "Roboto-Regular"
+}
+
+.select-item
+  text-align center
+  height 60px
+  border 1px solid #e5e5e5
+  border-radius 5px
+  font-family "Roboto-Regular"
+  font-size 20px
+  position relative
+  &:focus
+    border 1px solid #435993
 
 .icon-wrap
   margin-bottom: 30px
@@ -20,14 +91,43 @@
 .icon-icon-th
   width: 47px
   height: 47px
+  fill #a4a4a4
+.icon-checked
+  fill whiteColor
+  width 13px
+  height 13px
 
 .input-row
+  position relative
   width: 100%
   margin-bottom: 25px
   &:last-child
     margin-bottom: 0
+
+.name-field
+  position absolute
+  left 50%
+  top 5px
+  font-family "Roboto-Regular"
+  transform translate(-50%)
+  font-size 14px
+  color: #c8c8c8
+  visibility hidden
+  opacity 0
+  transition 0.2s
+
 .info-field
-  width: 100%
+  width 100%
+  &:focus ~ .name-field
+    visibility visible
+    opacity 1
+    transition 0.2s
+
+
+.name-field--active
+  visibility visible
+  opacity 1
+  transition 0.2s
 
 .review-row
   width: 100%
@@ -55,7 +155,11 @@
   width: 24px;
   height: 24px;
 .custom-indicator
+  display flex
+  align-items center
+  justify-content: center
   position: relative;
+  transition 0.3s ease-in-out
 .custom-control-input
   outline: none!important
   border: none
@@ -64,5 +168,89 @@
     border: none
     box-shadow: none
 
+.custom-control-input
+  &:checked ~ .custom-indicator
+    background: #435993
+    transition 0.3s ease-in-out
+
 .custom-control-description
   margin-left: 10px
+
+.select-row
+  width 70%
+
+.form-group
+  display flex
+  flex-direction column
+  align-items center
+
+.icon-up-arrow
+  width 13px
+  height 13px
+  fill: #435993
+  transition 0.3s
+
+.icon-wrap--arrow
+  position absolute
+  right 15px
+  top 50%
+  transform translate(-50%,-50%)
+.date-choice
+  display none
+.custom-option-list
+  position absolute
+  top 105%
+  left 0
+  width 100%
+  height 305px
+  overflow auto
+  padding 30px 0
+  z-index 99
+  background whiteColor
+  border-radius 5px
+  box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.2);
+  transition 0.3s ease-in-out
+  visibility visible
+  opacity 1
+
+.icon-wrap--arrow
+  transition 0.2s
+.icon-wrap--arrow-reverse
+  transform rotateX(-180deg)
+  transition 0.2s
+.date-pick
+  font-size 20px
+  color #435993
+  cursor pointer
+.custom-option-select
+  cursor pointer
+
+.custom-option-current
+  display flex
+  align-items center
+  justify-content center
+  height 100%
+
+.custom-option-list::-webkit-scrollbar {
+    width: 4px;
+    background: #d9d9d9
+}
+
+/* Track */
+.custom-option-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    height 125px
+}
+
+/* Handle */
+.custom-option-list::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    height 125px
+    border-radius 50px
+}
+
+.custom-option-list--closed
+  opacity 0
+  visibility hidden
+  transition 0.3s ease-in-out
+  height 0
